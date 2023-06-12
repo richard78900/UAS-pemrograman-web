@@ -1,0 +1,349 @@
+/* define everything */
+:root {
+    /* colors */
+    --primary-color: #f4991a;
+    --button-color: #5c3c10;
+    --heading-color: #e7de74;
+    --main-font-color: #fff;
+    --navbar-link-color: #1e1818;
+
+    /* fonts */
+    --heading-font: "Montserrat", sans-serif;
+    --main-font: "Roboto", sans-serif;
+
+    /* breakpoints for help */
+    --bs-breakpoint-xs: 0;
+    --bs-breakpoint-sm: 576px;
+    --bs-breakpoint-md: 768px;
+    --bs-breakpoint-lg: 992px;
+    --bs-breakpoint-xl: 1200px;
+    --bs-breakpoint-xxl: 1400px;
+}
+
+/* set all (general) */
+* {
+    font-family: var(--main-font);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.3s ease-in-out;
+}
+
+/* set container first yall */
+.container {
+    /* we will change this value later to 1420px */
+    max-width: var(--bs-breakpoint-lg);
+}
+
+/* set this so the above content is not near the new content */
+.section-margin {
+    margin-top: 200px;
+}
+
+/* now we shall start with the navbar styling */
+.navbar {
+    background-color: white;
+    height: 140px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+}
+
+.navbar .container {
+    /* padding: 0 20px; */
+    /* background-color: violet; */
+    margin: auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .navbar-wrapper {
+    /* background-color: wheat; */
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.navbar .navbar-wrapper .navbar-menu {
+    /* background-color: wheat; */
+    /* margin: 0 auto; */
+    margin-left: auto;
+}
+
+.navbar .navbar-logo {
+    font-family: var(--heading-font);
+    font-weight: 800;
+    font-size: 30px;
+    color: var(--primary-color);
+}
+
+.navbar .navbar-logo span {
+    font-family: var(--heading-font);
+    font-weight: 800;
+    font-size: 30px;
+    color: var(--heading-color);
+}
+
+.navbar .navbar-menu a {
+    font-family: var(--heading-font);
+    font-size: 18px;
+    font-weight: 400;
+    text-decoration: none;
+    color: var(--navbar-link-color);
+    /* margin: 0 20px; */
+    margin-left: 20px;
+}
+
+.navbar .navbar-menu button {
+    font-family: var(--heading-font);
+    font-size: 18px;
+    font-weight: 400;
+    text-decoration: none;
+    color: var(--navbar-link-color);
+    /* margin: 0 20px; */
+    margin-left: 20px;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    outline: none;
+}
+
+.navbar .navbar-menu a.active {
+    font-weight: 800;
+    color: var(--primary-color);
+}
+
+.navbar .navbar-icons i {
+    color: var(--primary-color);
+    font-size: 25px;
+}
+
+.navbar .burger {
+    font-size: 30px;
+    color: var(--primary-color);
+}
+
+.burger,
+.burger-exit {
+    display: none;
+}
+/* this is the end of navbar styling */
+
+/* order */
+.order {
+    padding: 0 20px;
+}
+
+.order .container {
+    margin: auto;
+}
+
+.order .row1 .label {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 15px;
+    font-family: var(--heading-font);
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.order .row1 .heading {
+    margin-top: 5px;
+    text-align: center;
+    font-family: var(--heading-font);
+    font-weight: 600;
+    font-size: 20px;
+    color: var(--black-color);
+}
+
+.order .container .row2 {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    position: relative;
+    padding: 0;
+}
+
+.table th,
+.table td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.order .row2 .form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.order .form-group input,
+.order .form-group textarea {
+    width: 992px;
+    padding: 18px 20px;
+    color: #fff;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    background-color: var(--primary-color);
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+
+.order .form-group input::placeholder,
+.order .form-group textarea::placeholder {
+    color: #fff;
+}
+
+.order .form-group input:focus,
+.order .form-group textarea:focus {
+    /* border: 3px solid var(--button-color); */
+    box-shadow: 0px 0px 0px 2px var(--button-color) inset;
+    background-color: #fff;
+    color: #1e1818;
+}
+
+textarea {
+    resize: none;
+}
+
+.order .form-group input:focus::placeholder,
+.order .form-group textarea:focus::placeholder {
+    color: #1e1818;
+    opacity: 1;
+}
+
+.order .form-group .btn-wrap {
+    margin-left: auto;
+}
+
+.order .form-group .btn-contact {
+    font-family: var(--heading-font);
+    text-transform: uppercase;
+    font-size: 15px;
+    margin-left: auto;
+    padding: 10px 10px;
+    border-radius: 20px;
+    color: var(--primary-color);
+    border: none;
+    outline: none;
+    width: min-content;
+    background-color: var(--button-color);
+    cursor: pointer;
+}
+
+.order .form-group .btn-contact:hover {
+    background-color: #fff;
+    box-shadow: 0px 0px 0px 2px var(--button-color) inset;
+}
+
+.row2 a {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--primary-color);
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    display: block;
+    text-decoration: none;
+    width: 50vh;
+}
+
+.row2 a:hover {
+    transform: translateY(-5px);
+}
+
+.row2 h3 {
+    color: #ffffff;
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-family: var(--heading-font);
+}
+
+.row2 h1 {
+    color: var(--button-color);
+    font-size: 30px;
+    font-family: var(--heading-font);
+}
+/* end order */
+
+/* responsive */
+@media (max-width: 768px) {
+    /* navbar responsive */
+    .navbar .container {
+        padding: 0 20px;
+    }
+
+    .navbar .navbar-wrapper {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: wheat;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        clip-path: circle(0.3% at 100% 0);
+        transition: 0.3s ease-out;
+    }
+
+    .navbar .navbar-wrapper.active {
+        clip-path: circle(141.2% at 100% 0);
+        transition: 0.3s ease-in;
+    }
+
+    .navbar .navbar-wrapper .navbar-menu {
+        margin: 0 auto;
+    }
+
+    .burger,
+    .burger-exit {
+        display: initial;
+    }
+
+    .navbar .navbar-menu a {
+        display: block;
+        margin: 20px 0;
+    }
+
+    .navbar .burger-exit {
+        position: absolute;
+        top: 50px;
+        right: 20px;
+        font-size: 30px;
+        color: var(--primary-color);
+    }
+
+    .order .container .row2 {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .row2 > a {
+        margin-bottom: 20px;
+    }
+    /* end navbar responsive */
+}
+
+@media (max-width: 576px) {
+    .navbar .navbar-wrapper .navbar-menu {
+        margin: 0 auto;
+    }
+}
+/* this is the end of responsive */

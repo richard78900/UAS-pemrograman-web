@@ -1,0 +1,877 @@
+/* define everything */
+:root {
+    /* colors */
+    --primary-color: #f4991a;
+    --button-color: #5c3c10;
+    --heading-color: #e7de74;
+    --main-font-color: #fff;
+    --navbar-link-color: #1e1818;
+
+    /* fonts */
+    --heading-font: "Montserrat", sans-serif;
+    --main-font: "Roboto", sans-serif;
+
+    /* breakpoints for help */
+    --bs-breakpoint-xs: 0;
+    --bs-breakpoint-sm: 576px;
+    --bs-breakpoint-md: 768px;
+    --bs-breakpoint-lg: 992px;
+    --bs-breakpoint-xl: 1200px;
+    --bs-breakpoint-xxl: 1400px;
+}
+
+/* set all (general) */
+* {
+    font-family: var(--main-font);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.3s ease-in-out;
+}
+
+/* set container first yall */
+.container {
+    /* we will change this value later to 1420px */
+    max-width: var(--bs-breakpoint-lg);
+}
+
+/* set this so the above content is not near the new content */
+.section-margin {
+    margin-top: 200px;
+}
+
+/* now we shall start with the navbar styling */
+.navbar {
+    background-color: white;
+    height: 140px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+}
+
+.navbar .container {
+    /* padding: 0 20px; */
+    /* background-color: violet; */
+    margin: auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .navbar-wrapper {
+    /* background-color: wheat; */
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.navbar .navbar-wrapper .navbar-menu {
+    /* background-color: wheat; */
+    /* margin: 0 auto; */
+    margin-left: auto;
+}
+
+.navbar .navbar-logo {
+    font-family: var(--heading-font);
+    font-weight: 800;
+    font-size: 30px;
+    color: var(--primary-color);
+}
+
+.navbar .navbar-logo span {
+    font-family: var(--heading-font);
+    font-weight: 800;
+    font-size: 30px;
+    color: var(--heading-color);
+}
+
+.navbar .navbar-menu a {
+    font-family: var(--heading-font);
+    font-size: 18px;
+    font-weight: 400;
+    text-decoration: none;
+    color: var(--navbar-link-color);
+    /* margin: 0 20px; */
+    margin-left: 20px;
+}
+
+.navbar .navbar-menu a.active {
+    font-weight: 800;
+    color: var(--primary-color);
+}
+
+.navbar .navbar-icons i {
+    color: var(--primary-color);
+    font-size: 25px;
+}
+
+.navbar .burger {
+    font-size: 30px;
+    color: var(--primary-color);
+}
+
+.burger,
+.burger-exit {
+    display: none;
+}
+/* this is the end of navbar styling */
+
+/* Home section start */
+.home {
+    padding: 0 20px;
+}
+
+.home .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 200px;
+    border-radius: 20px;
+    padding: 60px 95px;
+    background-color: var(--primary-color);
+}
+
+.home .content-right {
+    max-width: 500px;
+}
+
+.home .mySwiperHome {
+    width: 300px;
+    /* height: 300px; */
+}
+
+.swiper img {
+    display: block;
+    margin: auto;
+    height: 300px;
+    border-radius: 50px 10px;
+}
+
+.swiper-pagination-bullet {
+    border: 2px solid #e6dd3b7a;
+    background: none;
+    opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+    background: #e6dd3b;
+}
+
+.home .heading {
+    font-family: var(--heading-font);
+    font-weight: 800;
+    font-size: 30px;
+    color: var(--main-font-color);
+}
+
+.home .sub-heading {
+    font-size: 17px;
+    font-weight: 300;
+    color: var(--main-font-color);
+    width: 90%;
+    margin-top: 15px;
+}
+
+.home .btn-home {
+    margin-top: 100px;
+}
+
+.btn-home a {
+    text-decoration: none;
+}
+
+.btn-home .btn-explore {
+    padding: 16px 24px;
+    background-color: var(--button-color);
+    color: var(--primary-color);
+    border-radius: 18px;
+    font-family: var(--heading-font);
+    font-weight: 600;
+    font-size: 15px;
+    border: 2px solid var(--button-color);
+}
+
+.btn-home .btn-explore:hover {
+    background-color: #fff;
+}
+
+.btn-home .btn-learn {
+    margin-left: 20px;
+    padding: 16px 24px;
+    border-radius: 18px;
+    font-family: var(--heading-font);
+    font-weight: 600;
+    font-size: 15px;
+    border: 2px solid var(--button-color);
+    color: var(--button-color);
+}
+
+.btn-home .btn-learn:hover {
+    background-color: var(--button-color);
+    color: var(--primary-color);
+}
+/* this is the end of home section */
+
+/* panel start here */
+.panel {
+    margin-top: 200px;
+    padding: 0 20px;
+}
+
+.panel .container {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+}
+
+.panel .item {
+    display: flex;
+    align-items: center;
+}
+
+.item .icon {
+    background-color: var(--primary-color);
+    padding: 20px;
+    border-radius: 30px 5px;
+}
+
+.item .icon i {
+    color: #fff;
+    font-size: 30px;
+}
+
+.item .text-panel {
+    margin-left: 15px;
+}
+
+.text-panel .title {
+    font-family: var(--heading-font);
+    font-weight: 600;
+    font-size: 15px;
+    color: #2e2828;
+}
+
+.text-panel .subtitle {
+    margin-top: 5px;
+    font-weight: 300;
+    font-size: 15px;
+    color: #2e2828;
+}
+
+.text-panel .subtitle.mr-5 {
+    margin-right: 5px;
+}
+/* end panel */
+
+/* about */
+.about {
+    margin-top: 200px;
+    padding: 0 20px;
+}
+
+.about .container {
+    margin: auto;
+}
+
+.about .row1 {
+    text-align: center;
+}
+
+.about .row1 .label {
+    text-transform: uppercase;
+    font-size: 15px;
+    font-family: var(--heading-font);
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.about .row1 .heading {
+    margin-top: 5px;
+    font-family: var(--heading-font);
+    font-weight: 600;
+    font-size: 20px;
+    color: var(--black-color);
+}
+
+.about .row2 {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.about .img-box img {
+    height: 260px;
+}
+
+.about .img-box {
+    position: relative;
+}
+
+.about .row2 .detail {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(30, 111, 92, 0.52);
+    backdrop-filter: blur(13px);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    clip-path: circle(0% at 50% 50%);
+    transition: 0.3s ease-in-out;
+}
+
+.about .img-box:hover .detail {
+    clip-path: circle(70.7% at 50% 50%);
+    transition: 0.3s ease-in-out;
+}
+
+.about .row2 .detail a {
+    font-family: var(--heading-font);
+    font-weight: 600;
+    font-size: 18px;
+    color: #ece7b4;
+    text-decoration: none;
+}
+
+/* end about */
+
+/* product */
+.product {
+    margin-top: 200px;
+    padding: 0 20px;
+}
+
+.product .container {
+    margin: auto;
+}
+
+.product .container .row1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product .container .row1 .title-section {
+    width: 70%;
+}
+
+.product .row1 .label {
+    text-transform: uppercase;
+    font-size: 15px;
+    font-family: var(--heading-font);
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.product .row1 .heading {
+    margin-top: 5px;
+    font-family: var(--heading-font);
+    font-weight: 600;
+    font-size: 20px;
+    color: var(--black-color);
+}
+
+.product .btn-slider {
+    font-size: 35px;
+    color: var(--button-color);
+}
+
+.product .btn-slider i {
+    cursor: pointer;
+}
+
+.product .container .row2 {
+    margin-top: 50px;
+}
+
+.product .card-product {
+    position: relative;
+    background: var(--primary-color);
+    box-shadow: 1px 1px 10px -2px rgba(0, 0, 0, 0.25);
+    border-radius: 50px 10px;
+    width: 300px;
+    /* min-height: 380px; */
+    padding: 20px 26px;
+}
+
+.product .card-product img {
+    margin: auto;
+    display: block;
+    max-height: 250px;
+    border-radius: 50px 10px;
+    box-shadow: 1px 1px 10px -2px rgba(0, 0, 0, 0.25);
+}
+
+.product .card-product .card-body {
+    margin-top: 30px;
+}
+
+.card-product .product-name {
+    font-family: var(--heading-font);
+    font-weight: 600;
+    font-size: 18px;
+    color: var(--main-font-color);
+    text-decoration: none;
+}
+
+.card-product .stock {
+    color: #fff;
+    margin-top: 5px;
+}
+
+.card-product .price {
+    font-family: var(--heading-font);
+    font-weight: 600;
+    font-size: 18px;
+    color: #fff;
+    margin-top: 10px;
+}
+
+.card-product .btn-cart {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 20px;
+    background: var(--button-color);
+    border-radius: 30px 0px 50px;
+}
+
+.card-product .btn-cart:hover {
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.card-product .btn-cart {
+    font-size: 25px;
+    color: var(--primary-color);
+}
+/* end product */
+
+/* order */
+.order {
+    padding: 0 20px;
+}
+
+.order .container {
+    margin: auto;
+}
+
+.order .row1 .label {
+    text-transform: uppercase;
+    font-size: 15px;
+    font-family: var(--heading-font);
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.order .row1 .heading {
+    margin-top: 5px;
+    font-family: var(--heading-font);
+    font-weight: 600;
+    font-size: 20px;
+    color: var(--black-color);
+}
+
+.order .container .row2 {
+    margin-top: 50px;
+    /* display: flex; */
+    /* justify-content: center; */
+}
+
+.order .row2 .form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.order .form-group input,
+.order .form-group textarea {
+    width: 992px;
+    padding: 18px 20px;
+    color: #fff;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    background-color: var(--primary-color);
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+
+.order .form-group input::placeholder,
+.order .form-group textarea::placeholder {
+    color: #fff;
+}
+
+.order .form-group input:focus,
+.order .form-group textarea:focus {
+    /* border: 3px solid var(--button-color); */
+    box-shadow: 0px 0px 0px 2px var(--button-color) inset;
+    background-color: #fff;
+    color: #1e1818;
+}
+
+textarea {
+    resize: none;
+}
+
+.order .form-group input:focus::placeholder,
+.order .form-group textarea:focus::placeholder {
+    color: #1e1818;
+    opacity: 1;
+}
+
+.order .form-group .btn-wrap {
+    margin-left: auto;
+}
+
+.order .form-group .btn-contact {
+    font-family: var(--heading-font);
+    text-transform: uppercase;
+    font-size: 15px;
+    margin-left: auto;
+    padding: 10px 10px;
+    border-radius: 20px;
+    color: var(--primary-color);
+    border: none;
+    outline: none;
+    width: min-content;
+    background-color: var(--button-color);
+    cursor: pointer;
+}
+
+.order .form-group .btn-contact:hover {
+    background-color: #fff;
+    box-shadow: 0px 0px 0px 2px var(--button-color) inset;
+}
+/* end order */
+
+/* Footer */
+.footer {
+    background: var(--primary-color);
+    border-radius: 50px 50px 0px 0px;
+}
+
+.footer .container {
+    margin: auto;
+    padding-bottom: 10px;
+}
+
+.footer .container .row1 {
+    padding: 50px 0px;
+}
+
+.footer .content .footer-logo {
+    font-family: var(--heading-font);
+    font-weight: 800;
+    font-size: 20px;
+    color: var(--button-color);
+}
+
+.footer .content span {
+    font-family: var(--heading-font);
+    font-weight: 800;
+    font-size: 20px;
+    color: var(--heading-color);
+}
+
+.footer .content .email {
+    font-family: var(--heading-font);
+    font-size: 15px;
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    margin-top: 10px;
+}
+
+.footer .content .phone {
+    font-family: var(--heading-font);
+    font-size: 15px;
+    color: #fff;
+    margin-top: 5px;
+}
+
+.footer .footer-icons {
+    margin-top: 10px;
+}
+
+.footer .footer-icons i {
+    font-size: 20px;
+    color: var(--button-color);
+}
+
+.footer .footer-icons .bi-instagram {
+    margin-left: 5px;
+}
+
+.footer .container .row2 {
+    font-size: 14px;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+}
+/* End footer */
+
+/* responsive */
+@media (max-width: 768px) {
+    /* navbar responsive */
+    .navbar .container {
+        padding: 0 20px;
+    }
+
+    .navbar .navbar-wrapper {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: wheat;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        clip-path: circle(0.3% at 100% 0);
+        transition: 0.3s ease-out;
+    }
+
+    .navbar .navbar-wrapper.active {
+        clip-path: circle(141.2% at 100% 0);
+        transition: 0.3s ease-in;
+    }
+
+    .navbar .navbar-wrapper .navbar-menu {
+        margin: 0 auto;
+    }
+
+    .burger,
+    .burger-exit {
+        display: initial;
+    }
+
+    .navbar .navbar-menu a {
+        display: block;
+        margin: 20px 0;
+    }
+
+    .navbar .burger-exit {
+        position: absolute;
+        top: 50px;
+        right: 20px;
+        font-size: 30px;
+        color: var(--primary-color);
+    }
+    /* end navbar responsive */
+
+    /* home */
+    .home .container {
+        flex-direction: column;
+        padding: 60px 40px;
+    }
+
+    .home .heading {
+        font-size: 32px;
+    }
+
+    .home .sub-heading {
+        font-size: 20px;
+        width: 100%;
+    }
+
+    .home .mySwiperHome {
+        width: 300px;
+        /* height: 400px; */
+    }
+
+    .swiper img {
+        max-width: 300px;
+        height: 60%;
+        width: 60%;
+        margin-top: 100px;
+    }
+
+    .home .btn-home {
+        margin-top: 80px;
+    }
+
+    .btn-home .btn-explore {
+        padding: 16px 18px;
+        font-size: 13px;
+    }
+
+    .btn-home .btn-learn {
+        margin-left: 15px;
+        padding: 16px 18px;
+        font-size: 13px;
+    }
+    /* end home responsive */
+
+    /* panel responsive */
+    .panel .container {
+        flex-wrap: wrap;
+        padding: 0 20px;
+    }
+
+    .panel .item {
+        margin-top: 15px;
+    }
+
+    .item .icon {
+        background-color: var(--primary-color);
+        padding: 25px;
+        border-radius: 30px 5px;
+    }
+
+    .item .icon i {
+        color: #fff;
+        font-size: 40px;
+    }
+
+    .text-panel .title {
+        font-size: 20px;
+    }
+
+    .text-panel .subtitle {
+        font-size: 15px;
+    }
+
+    .text-panel .subtitle.mr-5 {
+        margin-right: 0px;
+    }
+    /* end panel responsive */
+
+    /* about responsive */
+    .about .row2 {
+        flex-wrap: wrap;
+    }
+
+    .about .img-box img {
+        height: 360px;
+    }
+    /* end about responsive */
+
+    /* order responsive */
+    .order .form-group input,
+    .order .form-group textarea {
+        width: 100%;
+        padding: 18px 20px;
+    }
+    /* end order responsive */
+
+    /* footer responsive */
+    .footer .container .row1 {
+        padding: 50px 20px;
+    }
+
+    .footer .container .row2 {
+        font-size: 12px;
+    }
+    /* end footer responsive */
+}
+
+@media (max-width: 576px) {
+    .navbar .navbar-wrapper .navbar-menu {
+        margin: 0 auto;
+    }
+    /* home responsive */
+    .home .container {
+        padding: 60px 20px;
+    }
+
+    .home .heading {
+        font-size: 30px;
+    }
+
+    .home .sub-heading {
+        font-size: 15px;
+        width: 100%;
+    }
+
+    .home .btn-home {
+        margin-top: 50px;
+    }
+
+    .btn-home .btn-explore {
+        padding: 12px 15px;
+        font-size: 12px;
+    }
+
+    .btn-home .btn-learn {
+        margin-left: 10px;
+        padding: 12px 15px;
+        font-size: 12px;
+    }
+
+    .swiper img {
+        max-width: 300px;
+        height: 60%;
+        width: 60%;
+        margin-top: 100px;
+    }
+    /* end home responsive */
+
+    /* panel responsive */
+    .panel {
+        margin-top: 100px;
+    }
+
+    .item .icon {
+        background-color: var(--primary-color);
+        padding: 25px;
+        border-radius: 30px 5px;
+    }
+
+    .item .icon i {
+        color: #fff;
+        font-size: 30px;
+    }
+
+    .text-panel .title {
+        font-size: 18px;
+    }
+
+    .text-panel .subtitle {
+        font-size: 13px;
+    }
+
+    .text-panel .subtitle.mr-5 {
+        margin-right: 0px;
+    }
+    /* end panel responsive */
+
+    /* about responsive */
+    .about .row2 {
+        flex-wrap: wrap;
+    }
+
+    .about .img-box img {
+        height: 160px;
+    }
+    /* end about responsive */
+
+    /* order responsive */
+    .order .form-group input,
+    .order .form-group textarea {
+        width: 100%;
+        padding: 18px 20px;
+    }
+    /* end order responsive */
+
+    /* footer responsive */
+    .footer .container .row1 {
+        padding: 50px 20px;
+    }
+
+    .footer .container .row2 {
+        font-size: 12px;
+    }
+    /* end footer responsive */
+}
+/* this is the end of responsive */

@@ -1,0 +1,277 @@
+/* define everything */
+:root {
+    /* colors */
+    --primary-color: #f4991a;
+    --button-color: #5c3c10;
+    --heading-color: #e7de74;
+    --navbar-link-color: #1e1818;
+
+    /* fonts */
+    --heading-font: "Montserrat", sans-serif;
+    --main-font: "Roboto", sans-serif;
+
+    /* breakpoints for help */
+    --bs-breakpoint-xs: 0;
+    --bs-breakpoint-sm: 576px;
+    --bs-breakpoint-md: 768px;
+    --bs-breakpoint-lg: 992px;
+    --bs-breakpoint-xl: 1200px;
+    --bs-breakpoint-xxl: 1400px;
+}
+
+body {
+    padding-bottom: 100px;
+}
+
+/* set all (general) */
+* {
+    font-family: var(--main-font);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.3s ease-in-out;
+}
+
+/* set container first yall */
+.container {
+    /* we will change this value later to 1420px */
+    max-width: var(--bs-breakpoint-lg);
+}
+
+/* set this so the above content is not near the new content */
+.section-margin {
+    margin-top: 200px;
+}
+
+/* now we shall start with the navbar styling */
+.navbar {
+    background-color: white;
+    height: 140px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+}
+
+.navbar .container {
+    /* padding: 0 20px; */
+    /* background-color: violet; */
+    margin: auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .navbar-wrapper {
+    /* background-color: wheat; */
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.navbar .navbar-wrapper .navbar-menu {
+    /* background-color: wheat; */
+    /* margin: 0 auto; */
+    margin-left: auto;
+}
+
+.navbar .navbar-logo {
+    font-family: var(--heading-font);
+    font-weight: 800;
+    font-size: 30px;
+    color: var(--primary-color);
+}
+
+.navbar .navbar-logo span {
+    font-family: var(--heading-font);
+    font-weight: 800;
+    font-size: 30px;
+    color: var(--heading-color);
+}
+
+.navbar .navbar-menu a {
+    font-family: var(--heading-font);
+    font-size: 18px;
+    font-weight: 400;
+    text-decoration: none;
+    color: var(--navbar-link-color);
+    /* margin: 0 20px; */
+    margin-left: 20px;
+}
+
+.navbar .navbar-menu a.active {
+    font-weight: 800;
+    color: var(--primary-color);
+}
+
+.navbar .navbar-icons i {
+    color: var(--primary-color);
+    font-size: 25px;
+}
+
+.navbar .burger {
+    font-size: 30px;
+    color: var(--primary-color);
+}
+
+.burger,
+.burger-exit {
+    display: none;
+}
+/* this is the end of navbar styling */
+
+/* about */
+.about {
+    margin-top: 200px;
+    padding: 0 20px;
+}
+
+.about .container {
+    margin: auto;
+}
+
+.about .row1 {
+    text-align: center;
+}
+
+.about .row1 .label {
+    text-transform: uppercase;
+    font-size: 15px;
+    font-family: var(--heading-font);
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.about .row1 .heading {
+    margin-top: 5px;
+    font-family: var(--heading-font);
+    font-weight: 600;
+    font-size: 20px;
+    color: var(--black-color);
+}
+
+.about .row2 {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.about .img-box img {
+    height: 260px;
+}
+
+.about .img-box {
+    position: relative;
+}
+
+.about .row2 .detail {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(111, 109, 30, 0.52);
+    backdrop-filter: blur(13px);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    clip-path: circle(0% at 50% 50%);
+    transition: 0.3s ease-in-out;
+}
+
+.about .img-box:hover .detail {
+    clip-path: circle(70.7% at 50% 50%);
+    transition: 0.3s ease-in-out;
+}
+
+.about .row2 .detail a {
+    font-family: var(--heading-font);
+    font-weight: 600;
+    font-size: 18px;
+    color: #ece7b4;
+    text-decoration: none;
+}
+
+/* end about */
+
+@media (max-width: 768px) {
+    /* navbar responsive */
+    .navbar .container {
+        padding: 0 20px;
+    }
+
+    .navbar .navbar-wrapper {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: wheat;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        clip-path: circle(0.3% at 100% 0);
+        transition: 0.3s ease-out;
+    }
+
+    .navbar .navbar-wrapper.active {
+        clip-path: circle(141.2% at 100% 0);
+        transition: 0.3s ease-in;
+    }
+
+    .navbar .navbar-wrapper .navbar-menu {
+        margin: 0 auto;
+    }
+
+    .burger,
+    .burger-exit {
+        display: initial;
+    }
+
+    .navbar .navbar-menu a {
+        display: block;
+        margin: 20px 0;
+    }
+
+    .navbar .burger-exit {
+        position: absolute;
+        top: 50px;
+        right: 20px;
+        font-size: 30px;
+        color: var(--primary-color);
+    }
+    /* end navbar responsive */
+
+    /* about responsive */
+    .about .row2 {
+        flex-wrap: wrap;
+    }
+
+    .about .img-box img {
+        height: 360px;
+    }
+    /* end about responsive */
+}
+
+@media (max-width: 576px) {
+    .navbar .navbar-wrapper .navbar-menu {
+        margin: 0 auto;
+    }
+
+    /* about responsive */
+    .about .row2 {
+        flex-wrap: wrap;
+    }
+
+    .about .img-box img {
+        height: 160px;
+    }
+    /* end about responsive */
+}
