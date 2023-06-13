@@ -81,48 +81,12 @@ if (isset($_POST["hapus"])) {
                         </h3>
                     </div>
                 </div>
-                <!-- <div class="row2">
-                    <form action="" method="POST" class="form-group" enctype="multipart/form-data">
-                        <input
-                            type="text"
-                            name="nama"
-                            id="nama"
-                            placeholder="Masukkan nama produk!"
-                        />
-                        <input
-                            type="number"
-                            name="stok"
-                            id="stok"
-                            placeholder="Masukkan stok!"
-                        />
-                        <input
-                            type="number"
-                            name="harga"
-                            id="harga"
-                            placeholder="Masukkan harga!"
-                        />
-                        <input
-                            type="file"
-                            name="img"
-                            id="img"
-                        />
-                        <div class="btn-wrap">
-                            <button
-                                type="submit"
-                                class="btn-contact"
-                                id="btn-order"
-                                name="submit-product"
-                            >
-                                Add
-                            </button>
-                        </div>
-                    </form>
-                </div> -->
                 <div class="row2">
                     <div class="table">
-                        <table>
+                        <table class="table">
                             <thead>
                                 <tr>
+                                    <th>No.</th>
                                     <th>Nama Pemesan</th>
                                     <th>Alamat</th>
                                     <th>Isi Pesan</th>
@@ -131,16 +95,21 @@ if (isset($_POST["hapus"])) {
                             </thead>
                             <tbody>
                                 <?php
+                                    $count = 1;
+
                                     foreach ($orders as $item) {
                                         echo '<tr>';
+                                        echo '<td>' . $count . '</td>';
                                         echo '<td>' . $item['name'] . '</td>';
                                         echo '<td>' . $item['address'] . '</td>';
                                         echo '<td>' . $item['message'] . '</td>';
                                         echo '<td><form action="" method="POST">';
                                         echo '<input type="hidden" name="order_id" value="' . $item['order_id'] . '">';
-                                        echo '<button type="submit" name="hapus">Hapus</button></td>';
+                                        echo '<button type="submit" name="hapus" class="btn-hapus">Hapus</button></td>';
                                         echo '</form>';
                                         echo '</tr>';
+
+                                        $count++;
                                     }
                                 ?>
                             </tbody>

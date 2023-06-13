@@ -164,6 +164,16 @@
     color: var(--black-color);
 }
 
+.order .row1 a {
+    margin-top: 5px;
+    text-align: center;
+    font-family: var(--heading-font);
+    font-weight: 600;
+    font-size: 15px;
+    text-decoration: none;
+    color: var(--button-color);
+}
+
 .order .container .row2 {
     margin-top: 20px;
     display: flex;
@@ -175,13 +185,41 @@
     border-collapse: collapse;
     position: relative;
     padding: 0;
+    border: 1px solid #ddd;
+}
+
+.table thead {
+    background-color: var(--primary-color);
+    text-transform: uppercase;
 }
 
 .table th,
 .table td {
+    font-weight: 600;
     padding: 8px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
+    text-align: center;
+    border: 1px solid var(--primary-color);
+}
+
+.table .btn-hapus {
+    font-family: var(--heading-font);
+    text-transform: uppercase;
+    font-size: 10px;
+    margin-left: auto;
+    padding: 10px 10px;
+    border-radius: 20px;
+    color: #fff;
+    border: none;
+    outline: none;
+    width: min-content;
+    background-color: #b83535;
+    cursor: pointer;
+}
+
+.table .btn-hapus:hover {
+    background-color: #fff;
+    color: #b83535;
+    box-shadow: 0px 0px 0px 2px #b83535 inset;
 }
 
 .order .row2 .form-group {
