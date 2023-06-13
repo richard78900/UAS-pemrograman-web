@@ -4,6 +4,13 @@ include("./app/config/database.php");
 
 function insertNewUser($name, $username, $password, $image) {
     global $conn;
+
+    // validate input
+    if(empty($name) or empty($username) or empty($password) or empty($image["name"])) {
+        echo "you cant input null value";
+        exit();
+    }
+
     $image_name = generateRandomName($image["name"]);
     if ($conn) {
         // check if the username already exists
@@ -51,6 +58,13 @@ function insertNewUser($name, $username, $password, $image) {
 
 function deleteUserByUserId($user_id) {
     global $conn;
+
+    // validate input
+    if(empty($user_id)) {
+        echo "user id is required";
+        exit();
+    }
+
     if ($conn) {
         // Get the image name before deleting the user
         $getImageSql = "SELECT image FROM users WHERE user_id = ?";

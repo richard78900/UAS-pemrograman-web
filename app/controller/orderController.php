@@ -4,6 +4,13 @@ include("./app/config/database.php");
 
 function insertNewOrder($name, $address, $message) {
     global $conn;
+
+    // validate input
+    if(empty($name) or empty($address) or empty($message)) {
+        echo "you cant input null value";
+        exit();
+    }
+
     if ($conn) {
         $name = $name;
         $address = $address;
@@ -47,6 +54,13 @@ function insertNewOrder($name, $address, $message) {
 
 function deleteOrderByOrderId($order_id) {
     global $conn;
+
+    // validate input
+    if(empty($order_id)) {
+        echo "order id is required";
+        exit();
+    }
+
     if ($conn) {
         $sql = "DELETE FROM orders WHERE order_id = ?";
     

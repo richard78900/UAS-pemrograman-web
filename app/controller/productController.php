@@ -4,6 +4,13 @@ include("./app/config/database.php");
 
 function insertNewProduct($name, $stock, $price, $image, $insert_by) {
     global $conn;
+
+    // validate input
+    if(empty($name) or empty($stock) or empty($price) or empty($image["name"]) or empty($insert_by)) {
+        echo "you cant input null value";
+        exit();
+    }
+
     $image_name = generateRandomName($image["name"]);
     if ($conn) {
         $sql = "INSERT INTO products (name, stock, price, image, insert_by) VALUES (?, ?, ?, ?, ?)";
@@ -37,6 +44,13 @@ function insertNewProduct($name, $stock, $price, $image, $insert_by) {
 
 function deleteProductByProductId($product_id) {
     global $conn;
+
+    // validate input
+    if(empty($product_id)) {
+        echo "product id is required";
+        exit();
+    }
+
     if ($conn) {
         // get image name before deleting the product
         $getImageSql = "SELECT image FROM products WHERE product_id = ?";
