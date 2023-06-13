@@ -83,7 +83,7 @@ if (isset($_POST["hapus"])) {
                     </div>
                 </div>
                 <div class="row2">
-                    <div class="table" style="overflow-x: auto;">
+                    <div class="table">
                         <table class="table">
                             <thead>
                                 <tr>
